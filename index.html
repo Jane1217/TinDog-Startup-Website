@@ -13,6 +13,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <style>
+    /* Pricing 区卡片美化 */
+    #pricing .card {
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #fffaf8;
+    }
+
+    #pricing .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    }
+
+    #pricing .card .card-body {
+      padding: 2rem 1.5rem;
+    }
+
+    #pricing .label-popular {
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
+      font-weight: bold;
+    }
     body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
@@ -94,8 +117,8 @@
     /* Ensure "label-popular" text is centered inside the badge */
     .label-popular {
       position: absolute;
-      top: -10px;
-      right: -10px;
+      top: 10px;
+      right: 10px;
       background: #cd5c5c;
       color: #fff8f0;
       /* Use flexbox to center the text */
@@ -136,6 +159,8 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+      height: 100%;
+      width: 100%;
     }
     #features .feature-card:hover {
       transform: translateY(-8px);
@@ -167,11 +192,6 @@
 
     #testimonial .carousel-item .profile-img {
       margin-bottom: 1rem; /* 增加头像与文字之间的距离 */
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
     #testimonial .carousel-caption {
@@ -263,10 +283,15 @@
       background: #cd5c5c;
       border: none;
       color: #fff8f0;
+      border-radius: 50px;
+      padding: 0.5rem 1.2rem;
+    }
+    .card-group {
+      overflow: visible;
     }
     #footer .subscribe-btn:hover {
-      background: #ffd700;
-      color: #4B2E2E;
+      background: #8B4513;
+      color: #fff8f0;
     }
   </style>
 </head>
@@ -304,21 +329,21 @@
   <section id="features">
     <div class="container">
       <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
+        <div class="col d-flex align-items-stretch">
           <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
             <i class="fa-solid fa-bolt feature-icon"></i>
             <h3>Lightning Fast</h3>
             <p>Instant matches and messages, no waiting.</p>
           </div>
         </div>
-        <div class="col">
+        <div class="col d-flex align-items-stretch">
           <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
             <i class="fa-solid fa-paw feature-icon"></i>
             <h3>Pet-Friendly</h3>
             <p>We vet all dogs for a safe experience.</p>
           </div>
         </div>
-        <div class="col">
+        <div class="col d-flex align-items-stretch">
           <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
             <i class="fa-solid fa-heart feature-icon"></i>
             <h3>Guaranteed Love</h3>
