@@ -1,0 +1,345 @@
+.gradient-background {
+  background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+.profile-img {
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* Pricing 区卡片美化 */
+#pricing .card {
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fffaf8;
+}
+
+#pricing .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+#pricing .card .card-body {
+  padding: 2rem 1.5rem;
+}
+
+#pricing .label-popular {
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding-top: 56px; /* Offset for fixed navbar */
+  background: linear-gradient(135deg, #fff5f5, #ffe4e1);
+  background-size: 400% 400%;
+  animation: bgShift 20s ease infinite;
+}
+
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Navbar 半透明奶油色底色，避免 body 渐变透出 */
+.navbar {
+  background: rgba(255, 250, 240, 0.8); /* 浅奶油半透明 */
+  transition: background 0.4s ease;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #4B2E2E; /* 深棕 */
+  transition: color 0.2s;
+}
+
+.navbar .nav-link:hover {
+  color: #A0522D; /* 浅棕 */
+}
+
+.navbar.scrolled {
+  background: #4B2E2E !important; /* 深棕 */
+}
+
+.navbar.scrolled .navbar-brand,
+.navbar.scrolled .nav-link {
+  color: #fff8f0; /* 米白 */
+}
+
+.navbar.scrolled .nav-link:hover {
+  color: #d4afb8; /* 浅粉 */
+}
+
+/* Hero 区：CSS 条纹动画背景 */
+#title {
+  position: relative;
+  min-height: 100vh;
+  background: repeating-linear-gradient(
+    45deg,
+    #fffaf0,
+    #fffaf0 10px,
+    #ffe4b5 10px,
+    #ffe4b5 20px
+  );
+  animation: moveStripe 8s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4B2E2E;
+}
+
+@keyframes moveStripe {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+#title::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.5); /* 半透明遮罩 */
+  z-index: 1;
+}
+
+#title .content-wrapper {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+#title h1 {
+  font-size: 3rem;
+  color: #4B2E2E;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+/* Ensure "label-popular" text is centered inside the badge */
+.label-popular {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #cd5c5c;
+  color: #fff8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.8rem; /* slightly reduced horizontal padding */
+  font-size: 0.8rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  line-height: 1; /* prevent extra height */
+}
+
+.btn-cta {
+  background: linear-gradient(45deg, #8B4513, #A0522D); /* 柔和棕色渐变 */
+  color: #fff8f0;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+  margin-top: 1.5rem;
+}
+
+.btn-cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  background: #8B4513; /* 纯深棕 */
+  color: #fff8f0;
+}
+
+/* Features 区背景：浅奶油色 */
+#features {
+  padding: 4rem 0;
+  background: #fffaf0;
+}
+
+#features .feature-card {
+  background: #fff5f5;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+  height: 100%;
+  width: 100%;
+}
+
+#features .feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+  background: linear-gradient(45deg, #fff5f5, #ffe4e1);
+}
+
+#features .feature-icon {
+  font-size: 2.5rem;
+  color: #4B2E2E;
+  margin-bottom: 1rem;
+}
+
+#features .feature-card h3,
+#features .feature-card p {
+  color: #4B2E2E; /* 深棕 */
+}
+
+/* Testimonials 区背景：浅米色 */
+#testimonial {
+  padding: 4rem 0;
+  background: #fff5e1;
+}
+
+#testimonial .carousel-item {
+  text-align: center;
+  color: #fff8f0;
+  padding: 2rem 1rem; /* 增加上下及左右内边距 */
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+}
+
+#testimonial .carousel-item .profile-img {
+  margin-bottom: 1rem; /* 增加头像与文字之间的距离 */
+}
+
+#testimonial .carousel-caption {
+  position: static;       /* 取消绝对定位，让文字流式显示 */
+  max-width: 500px;       /* 限制文字区最大宽度 */
+  margin: 0 auto;         /* 居中展示 */
+  padding: 0.5rem;        /* 适度内边距 */
+  margin-top: 1.5rem;     /* 让文字距离头像更充足 */
+}
+
+#testimonial .carousel-caption h5 {
+  color: #fff8f0;
+  font-size: 1.5rem; /* 标题稍大 */
+}
+
+#testimonial .carousel-caption p {
+  color: #fff8f0;
+  font-size: 1.125rem; /* 段落增大 */
+}
+
+#testimonial .carousel-caption .stars {
+  color: #fff8f0;
+  font-size: 1.25rem; /* 星级增大 */
+}
+
+/* Logo 滚动 */
+#partners {
+  background: #222;
+  padding: 2rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+#partners .logo-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 20s linear infinite;
+}
+
+#partners .logo-track img {
+  height: 50px;
+  margin: 0 2rem;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+#partners .logo-track img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pricing 区背景：纯白色 */
+#pricing {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+#pricing .btn-outline-primary,
+#pricing .btn-outline-secondary {
+  color: #cd5c5c; /* 淡棕粉色 */
+  border-color: #cd5c5c;
+  background: transparent;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+#pricing .btn-primary {
+  background: #cd5c5c;
+  border-color: #cd5c5c;
+  color: #fff8f0;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+#pricing .btn-outline-primary.btn-lg:hover,
+#pricing .btn-primary.btn-lg:hover,
+#pricing .btn-outline-secondary.btn-lg:hover {
+  background: #8B4513; /* 纯深棕 */
+  color: #fff8f0 !important;
+  border-color: #8B4513 !important;
+}
+
+/* Footer 区背景：浅棕灰色 */
+#footer {
+  background: #e0d6cd;
+  color: #4B2E2E;
+  padding: 3rem 0;
+  font-size: 0.9rem;
+}
+
+#footer a {
+  color: #4B2E2E;
+}
+
+#footer a:hover {
+  color: #d2691e;
+}
+
+#footer h5, #footer p, #footer .text-muted {
+  color: #4B2E2E !important;
+}
+
+#footer .subscribe-btn {
+  background: #cd5c5c;
+  border: none;
+  color: #fff8f0;
+  border-radius: 50px;
+  padding: 0.5rem 1.2rem;
+}
+
+.card-group {
+  overflow: visible;
+}
+
+#footer .subscribe-btn:hover {
+  background: #8B4513;
+  color: #fff8f0;
+}
